@@ -38,59 +38,105 @@ class Program
         int price3 = 20;
         int price4 = 35;
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
-        Console.WriteLine("Alors, quelquechose te fais envie ? Si oui choisis l'arme que tu souhaites en indiquant le numéro de celle-ci!");
         Console.WriteLine("Alors, quelque-chose te fais envie ? Si oui choisis l'arme que tu souhaites en indiquant le numéro de celle-ci!");
         int selectedWeapon = Convert.ToInt32(Console.ReadLine());
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
         if (selectedWeapon == 1)
         {
-            if(money >= price1)
+            if(money >= price1 && age>=18)
             {
+                Console.WriteLine(+money - price1 + " euros restant");
                 Console.WriteLine("c'est bon ! Le couteau est à toi !");
             }
             else
             {
-                Console.WriteLine("Désolé " + name + " mais ce ne sera pas possible.");
+               if(money < price1 && age >= 18)
+                {
+                    Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent.");
+                }
+                if(age < 18 && money >= price1)
+                {
+                    Console.WriteLine("Désolé " + name + " mais tu n'es pas majeur ! C'est non!");
+                } 
+                if(money < price1 && age < 18)
+                {
+                    Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent et en plus tu es mineur! C'est non!");
+                }
             }
         }
         else
         {
             if (selectedWeapon == 2)
             {
-                if (money >= price2)
+                if (money >= price2 && age >= 18)
                 {
+                    Console.WriteLine(+money - price2 + " euros restant");
                     Console.WriteLine("c'est bon ! Le coutelas est à toi !");
 
                 }
                 else
                 {
-                    Console.WriteLine("Désolé " + name + " mais ce ne sera pas possible.");
-                   
+                    if (money < price2 && age >= 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent.");
+                    }
+                    if (age < 18 && money >= price2)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'es pas majeur ! C'est non!");
+                    }
+                    if (money < price2 && age < 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent et en plus tu es mineur! C'est non!");
+                    }
                 }
             }
             if (selectedWeapon == 3)
             {
-                if (money >= price3)
+                if (money >= price3 && age >= 18)
                 {
+                    Console.WriteLine(+money - price3 + " euros restant");
                     Console.WriteLine("c'est bon ! Le fusil à canon scié est à toi !");
 
                 }
                 else
                 {
-                    Console.WriteLine("Désolé " + name + " mais ce ne sera pas possible.");
-                    
+                    if (money < price3 && age >= 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent.");
+                    }
+                    if (age < 18 && money >= price3)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'es pas majeur ! C'est non!");
+                    }
+                    if (money < price3 && age < 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent et en plus tu es mineur! C'est non!");
+                    }
+
                 }
             }
             if (selectedWeapon == 4)
             {
-                if (money >= price4)
+                if (money >= price4 && age >= 18)
                 {
+                    Console.WriteLine(+money - price4 + " euros restant");
                     Console.WriteLine("c'est bon ! La carabine à répétition est à toi !");
 
                 }
                 else
                 {
-                    Console.WriteLine("Désolé " + name + " mais ce ne sera pas possible.");
+                    if (money < price4 && age >= 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent.");
+                    }
+                    if (age < 18 && money >= price4)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'es pas majeur ! C'est non!");
+                    }
+                    if (money < price4 && age < 18)
+                    {
+                        Console.WriteLine("Désolé " + name + " mais tu n'as pas assez d'argent et en plus tu es mineur! C'est non!");
+                    }
                 }
             }
         }
