@@ -9,23 +9,24 @@ class Program
          */
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
-        Console.WriteLine("Je m'appelle Enzo et mon jeux préféré est The last of us part 2.");
+        Console.WriteLine("Salut ! Moi c'est Enzo et mon jeux préféré c'est The last of us part 2!");
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
-        Console.WriteLine("Quel est ton prénom?");
+        Console.WriteLine("C'est quoi ton prénom?");
         String name = Console.ReadLine();
-        Console.WriteLine("Quel est ton âge?");
+        Console.WriteLine("Et ton âge?");
         int age = Convert.ToInt32(Console.ReadLine());
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
         if (age >= 18)
         {
-            Console.WriteLine("Tu es majeur.");
+            Console.WriteLine("Tu es donc majeur.");
         }
         else
         {
-            Console.WriteLine("Tu es mineur.");
+            Console.WriteLine("Tu es donc mineur.");
         }
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
-        
+        Console.WriteLine("Ho je vois que tu as de l'argent sur toi ! Combien d'euro possèdes-tu?");
+        int money = Convert.ToInt32(Console.ReadLine());
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
         
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
